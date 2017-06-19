@@ -1,6 +1,7 @@
 setTimeout(function() {
 	console.log('3 seconds have passed.');
 }, 3000);
+// After 3 seconds, it'll print, "3 seconds have passed".
 
 var time = 0;
 var timer = setInterval(function(){
@@ -16,7 +17,9 @@ var timer = setInterval(function(){
 // 6 seconds have passed.
 
 console.log(__dirname);
-// /Users/Caitly/Desktop/JavaScriptSummerElevenFifty/jsfundamentals
+/*
+/Users/Caitly/Desktop/JavaScriptSummerElevenFifty/jsfundamentals
+*/
 
 console.log(__filename);
 /* 
@@ -24,3 +27,11 @@ console.log(__filename);
 */
 
 // We'll cover require and exports later.
+
+
+
+
+
+
+
+
