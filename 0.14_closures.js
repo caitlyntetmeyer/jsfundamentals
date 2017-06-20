@@ -1,8 +1,5 @@
-/*
-Closures essentially functions
-	variables inside of functions cannot be used outside
-*/
-
+// Closures - essentially functions; variables inside of functions cannot be used outside
+// Ex 1:
 var init = function(){
 
 	var name = "Summer";
@@ -14,12 +11,13 @@ var init = function(){
 	displayName();
 }
 init();
-// console.log(name)
+// console.log(name) --> Summer
 
+// Ex. 2:
 var friend = {};
 
 var setAge = function(myAge){
-	//here is our closure
+	// Here is our closure:
 	var birthday = '5/16/2017';
 
 	return {
@@ -29,19 +27,9 @@ var setAge = function(myAge){
 		}
 	}
 }
-/*
- var friend = {
-	age = {
-		//setting the age
-		
-		getAge()
+// { getAge: [Function: getAge] }
 
-		//return the age
-	}
- }
-
-*/
-friend.age = setAge(55);
-console.log(friend.age);
-console.log(friend.age.getAge());
-console.log(friend.birthday);
+friend.age = setAge(55);	
+console.log(friend.age);	// 55
+console.log(friend.age.getAge());	// 55
+console.log(friend.birthday);	// undefined

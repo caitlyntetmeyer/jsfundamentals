@@ -1,4 +1,6 @@
-// iife:
+// IIFE - immediately-invoked function expression (a self-executing anonymous
+// function).
+// IIFE Example:
 (function countToTen() {
 	for (i = 1; i < 11; i++) {
 		console.log(i);
@@ -26,8 +28,9 @@ console.Log(smartCar._____.calculateMpg());
 
 var smartCar = {};
 var smartCarMPG = function(totalMiles, totalGallons) {
-		calculateMpg = function(){
+		calculateMpg = function() {
 			console.log("MPG: " + (totalMiles/totalGallons));
+			return totalMiles/totalGallons;
 	};
 };
 

@@ -2,10 +2,11 @@
 
 Retrieval
 
-Values can be retrieved from an object by wrapping a string expression in a [ ] suffix.
+Values can be retrieved from an object by wrapping a string expression in a 
+[ ] suffix.
 
-If the string expression is a constant, and if it is a legal JavaScript name and not a
-reserved word, then the . notation can be used instead. 
+If the string expression is a constant, and if it is a legal JavaScript name 
+and not a reserved word, then the . notation can be used instead. 
 
 The . notation is preferred because it is more compact and it reads better:
 
@@ -16,8 +17,8 @@ flight.departure.IATA 	// "SYD"
 
 /*
 
-The undefined value is produced if an attempt is made to retrieve a nonexistent
-member:
+The undefined value is produced if an attempt is made to retrieve a 
+nonexistent member:
 
 */
 
