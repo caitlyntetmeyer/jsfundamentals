@@ -11,8 +11,7 @@ Use the DOM when we interact w/web pages:
 
 We can do this on the fly, as our web page is being loaded or viewed.
 
-DOCUMENT:
-document - the web page; usu. an HTML document
+DOCUMENT: document - the web page; usu. an HTML document
 
 OBJECT:
 Objects are elements.
