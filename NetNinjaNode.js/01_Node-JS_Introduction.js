@@ -18,6 +18,6 @@ Why Node.js?
 -creating a web server: routing, Express, templating
 -make a Node.js application (todo app)
 
-
+He uses Atom. UI Theme: Monokai Tweaked; Syntax Theme: Atom Monokai
 
 */
