@@ -26,3 +26,33 @@ myEmitter.on('someEvent', function(myMessage){
 });
 
 myEmitter.emit('someEvent', 'The event was emitted, y\'all!'); // The event was emitted, y'all!
+
+// Let's start over in app.js:
+var events = require('events');
+var util = require('util');
+
+var Person = function(name){
+  this.name = name;
+};
+
+// Make Person inherit the EventEmitter:
+util.inherits(Person, events.EventEmitter);
+
+// Create 3 new people:
+var james = new Person('james');
+var mary = new Person('mary');
+var ryu = new Person('ryu');
+
+// Store the people in an array:
+var people = [james, mary, ryu];
+
+// Because we've inherited the EventEmitter above, we can attach a custom event to each person as we go through the array.
+people.forEach(function(person){
+  person.on('speak', function(myMessage){
+    console.log(person.name + ' said: ' + myMessage);
+  });
+});
+
+// EMIT the 'speak' event we created by using .emit:
+james.emit('speak', 'hey dudes'); // james said: hey dudes
+ryu.emit('speak', 'I want a curry'); // ryu said: I want a curry
