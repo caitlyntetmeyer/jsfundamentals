@@ -13,4 +13,21 @@ var fs = require('fs');
 
 // Use a synchronous method, readFileSync, to read readMe.txt:
 var readMe = fs.readFileSync('readMe.txt', 'utf8');
-console.log(readMe);
+console.log(readMe); // Yay, you read me!
+
+// Above, we READ a file. Now, let's WRITE a new file called writeMe.txt by using .writeFileSync:
+fs.writeFileSync('writeMe.txt', readMe);
+// When you run "node app", a new file called "writeMe.txt" is created, and its content is made to be "Yay, you read me!"
+
+// Now let's look at the ASYNCHRONOUS versions of the above methods.
+// First, .readFile:
+fs.readFile('readMe.txt', 'utf8', function(err, data){
+  console.log(data);
+});
+// Run "node app" and see "Yay, you read me!"
+
+// Second, .writeFile:
+fs.readFile('readMe.txt', 'utf8', function(err, data){
+  fs.writeFile('writeMe.txt', data);
+});
+// Run "node app" and see that the new file has been written.
