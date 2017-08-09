@@ -9,6 +9,7 @@ var http = require('http');
 var server = http.createServer();
 // We have now created a server. However, if we make a request to the server, nothing will happen. So we edit it to look like this:
 var server = http.createServer(funtion(req, res){
+  console.log('Request was made: ' + req.url);
   // RESPONSE HEADERS DIAGRAM:
   // Request (request and request headers) goes from client to server.
   // Response (response data + response headers (Content-Type and status)) goes from server to client.
@@ -16,4 +17,6 @@ var server = http.createServer(funtion(req, res){
   res.end('Hey ninjas');
 });
 
-server.listen(3000, '127.0.0.1')
+server.listen(3000, '127.0.0.1');
+console.log('Listening on port 3000');
+// If you open the browser and go to 127.0.0.1:3000, you'll see "Hey ninjas" on the page and 'Hey ninjas' in the console.
