@@ -8,7 +8,7 @@
 
 console.log(typeof myAwesomeVariable); // "undefined" because an undeclared variable is assigned the value "undefined" at execution and is ALSO of type "undefined"
 
-console.log(myAwesomeVariable); // "ReferenceError: variable is not defined" because a ReferenceError is thrown when trying to access a previously-undeclared 
+console.log(myAwesomeVariable); // "ReferenceError: variable is not defined" because a ReferenceError is thrown when trying to access a previously-undeclared variable
 
 /* Hoisting variables: */
 
@@ -19,8 +19,8 @@ JavaScript Lifecycle:
 3) Usage - 
 */
 var b; // Declaration
-b = 22; // Initialization/Assignment
-var b = 22; // Usage
+b = 22; 
+var b = 22; // Initialization/Assignment
 b - 20; // Usage
 
 // The most-used pattern:
