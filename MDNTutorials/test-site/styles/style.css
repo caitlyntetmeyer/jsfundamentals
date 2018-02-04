@@ -1,0 +1,23 @@
+html {
+	font-family: 'Oswald', sans-serif;
+	color: #0B2377;
+}
+
+body {
+	width: 700px;
+	margin: 0 auto;
+	background-color: snow;
+	padding: 0 20px 20px 20px;
+	border: 5px solid black;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+}
+
+p, li {
+	font-size: 18px;
+	line-height: 1.2;
+	letter-spacing: 0.5px;
+}
