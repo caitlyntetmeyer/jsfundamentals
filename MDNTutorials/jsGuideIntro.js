@@ -30,11 +30,74 @@ JavaScript Grammar and Types:
 
 		2) let - declares a block-scoped, local variable, optionally initializing it to a value
 
-		3) const - declares a block-scoped, read-only named constant
+		3) const - declares a block-scoped, read-only named constant (can't be changed)
 
+	
 	Variables:
 
+		-Use variables as symbolic names for values
+		-The names for values are called "identifiers"
+		-Identifiers must begin w/a letter, _, or $
+		-Ex: Number_hits, temp99, $credit, _name
 
-*/
+		Declaring Variables:
+
+			Three ways:
+			1) With the keyword "var" (ex: var x = 42)
+			2) x = 42 (DON'T DO THIS)
+			3) With the keyword "let" (ex: let y = 13)
+
+		Evaluating Variables: 
+
+			A variable declared using the "var" or "let" statement w/no assigned value specified has the value of "undefined". 
+
+			An attempt to access an _unDECLARED_ variable results in a ReferenceError exception being thrown.
+			*/
+
+			var a;
+			console.log('The value of a is ' + a); // The value of a is undefined
+
+			console.log('The value of b is ' + b); // The value of b is undefined
+			var b;
+
+			console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined
+
+			let x;
+			console.log('The value of x is ' + x); // The value of x is undefined
+
+			console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
+			let y;
+
+			// This evaluates to true because "input" is undefined (doesn't have a value):
+			var input;
+			if (input === undefined) {
+				doThis(); // This will run.
+			} else {
+				doThat();
+			}
+
+			// In a boolean context, "undefined" behaves as false:
+			var myArray = []; // myArray is undefined
+			if (!myArray[0]) myFunction(); // This WILL run because myArray is not 0 - it's undefined.
+
+			// The undefined value converts to NaN when used in numeric context:
+			var a;
+			a + 2; // NaN because a is undefined
+
+			// If a variable is "null", it'll behaves as 0 in numeric contexts and as false in boolean context:
+			var n = null;
+			console.log(n * 32); // 0 because null behaves as 0 in numberic contexts
+
+			
+
+
+
+
+
+
+
+
+
+
 
 
