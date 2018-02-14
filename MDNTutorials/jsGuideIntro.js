@@ -7,17 +7,17 @@ JavaScript Guide - Introduction:
 
 	The DOM (Document Object Model) defines the way in which HTML document objects are exposed to your script.
 
-*/
+	*/
 
-// Ex. 1:
+	// Ex. 1:
 
-function greetMe(yourName) {
-  alert("Hello, " + yourName + "!");
-}
+	function greetMe(yourName) {
+	  alert("Hello, " + yourName + "!");
+	}
 
-greetMe("Caitlyn"); // Hello, Caitlyn!
+	greetMe("Caitlyn"); // Hello, Caitlyn!
 
-/* 
+	/* 
 
 JavaScript Grammar and Types:
 
@@ -88,11 +88,39 @@ JavaScript Grammar and Types:
 			var n = null;
 			console.log(n * 32); // 0 because null behaves as 0 in numberic contexts
 
-			
+		/*
+		
+		Variable Scope:
 
+			Global vs. Local variables
+			*/
 
+			if (true) {
+				var x = 5;
+			}
+			console.log(x); // 5
 
+			// The behavior changes if you use "let":
 
+			if (true) {
+				let y = 5;
+			}
+			console.log(y); // ReferenceError: y is not defined
+
+	// Constants
+
+		const PI = 3.14; // A constant must be initialized to a value. It can't change value.
+
+		const MY_OBJECT = {'key': 'value'};
+		MY_OBJECT.key = 'otherValue'; // This statement is executed without problems.
+
+// Data Structures and Types:
+
+	// Data Types:
+
+	// Data Type Conversion:
+
+	// Converting Strings to Numbers:
 
 
 
