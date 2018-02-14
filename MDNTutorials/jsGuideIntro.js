@@ -133,15 +133,29 @@ JavaScript Grammar and Types:
 		2) Object - named containers for values
 
 		Objects and funcitons are the other fundamental elements in JavaScript.
-		
+
 		Functions - procedures that your app can perform
 
 		*/
 
 
-
-
 	// Data Type Conversion:
+
+		// You can start with this:
+		var answer = 42;
+
+		//...and later make it this without problems:
+		answer = 'Thanks for all the fish';
+
+		// That's because JavaScript is dynamically typed.
+
+		// In expressions w/both numeric and string values w/the + operator, JS converts numeric values to strings:
+		x = "The answer is " + 42; // The answer is 42
+		y = 42 + " is the answer"; // 42 is the answer
+
+		// In statements involving other operators, JS does NOT convert numeric values to strings:
+		'37' - 7 // 30 because nothing was converted to a string
+		'37' + 7 // "377" because stuff WAS converted to strings
 
 	// Converting Strings to Numbers:
 
