@@ -118,6 +118,29 @@ JavaScript Grammar and Types:
 
 	// Data Types:
 
+		/*
+		
+		7 Data Types:
+
+		1) Six data types that are primitives:
+			a) Boolean
+			b) null
+			c) undefined - top-level property whose value is not defined
+			d) Number
+			e) String
+			f) Symbol - its instances are unique and immutable
+
+		2) Object - named containers for values
+
+		Objects and funcitons are the other fundamental elements in JavaScript.
+		
+		Functions - procedures that your app can perform
+
+		*/
+
+
+
+
 	// Data Type Conversion:
 
 	// Converting Strings to Numbers:
