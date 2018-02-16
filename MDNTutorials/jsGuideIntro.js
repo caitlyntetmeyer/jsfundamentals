@@ -153,12 +153,22 @@ JavaScript Grammar and Types:
 		x = "The answer is " + 42; // The answer is 42
 		y = 42 + " is the answer"; // 42 is the answer
 
-		// In statements involving other operators, JS does NOT convert numeric values to strings:
+		// In statements involving other operators besides +, JS does NOT convert numeric values to strings:
 		'37' - 7 // 30 because nothing was converted to a string
-		'37' + 7 // "377" because stuff WAS converted to strings
 
 	// Converting Strings to Numbers:
 
+		// In the case that a value representing a number is in memory as a string, there are methods for conversion.
+
+		parseInt()
+		parseFloat()
+		// parseInt only returns whole numbers, so its use is diminished for decimals. Additionally, a best practice for parseInt is to always include the radix parameter. The radix parameter is used to specify which numerical system is to be used.
+
+		// An alternative method of retrieving a number from a string is with the + (unary plus) operator:
+
+		'1.1' + '1.1' = '1.11.1'
+		(+'1.1') + (+'1.1') = 2.2   
+		// Note: the parentheses are added for clarity, not required.
 
 
 
