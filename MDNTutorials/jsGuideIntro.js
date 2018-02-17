@@ -158,11 +158,11 @@ JavaScript Grammar and Types:
 
 	// Converting Strings to Numbers:
 
-		// In the case that a value representing a number is in memory as a string, there are methods for conversion.
+		// In the case that a value representing a number is in memory as a string, there are methods for conversion:
 
 		parseInt()
 		parseFloat()
-		// parseInt only returns whole numbers, so its use is diminished for decimals. Additionally, a best practice for parseInt is to always include the radix parameter. The radix parameter is used to specify which numerical system is to be used.
+		// parseInt only returns whole numbers, so its use is diminished for decimals.
 
 		// An alternative method of retrieving a number from a string is with the + (unary plus) operator:
 
@@ -171,6 +171,32 @@ JavaScript Grammar and Types:
 		// Note: the parentheses are added for clarity, not required.
 
 
+	/*
+
+	Literals:
+
+		You use literals to represent values in JavaScript. These are fixed values, not variables, that you literally provide in your script. This section describes the following types of literals:
+
+		Array literals
+		Boolean literals
+		Floating-point literals
+		Integers
+		Object literals
+		RegExp literals
+		String literals
+
+	*/
+
+		// Array Literals:
+
+			var coffees = ['French Roast', 'Colombian', 'Kona'];
+
+			var fish = ['Lion', , 'Angel'];
+			// fish[0] is Lion, fish[1] is undefined, fish[2] is Angel
+
+			// Don't use a trailing comma (at the end)!
+
+			
 
 
 
