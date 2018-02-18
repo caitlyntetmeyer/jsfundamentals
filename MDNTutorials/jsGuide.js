@@ -218,6 +218,85 @@ JavaScript Grammar and Types:
 				// A leading 0b or 0B indicates a binary integer literal. Binary integers can only include the digits 0 and 1:
 				var binaryBase2 = [0b11, 0b0011, -0b11];
 
+		// Floating-Point Literals: [(+|-)][digits][.digits][(E|e)[(+|-)]digits]
+
+		3.1415926
+		-.123456789
+		-3.1E+12
+		.1e-23
+
+		/* 
+
+		Object Literals:
+
+			object literal - a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces
+
+			Don't use at beginning of statement because the { will be interpreted as the beginning of a block.
+
+			Example: 1st element of car object defines property myCar and assigns it to a new string, "Saturn". 2nd element, the getCar property, is immediately assigned the result of invoking the function (carTypes("Honda")). 3rd element, the special property, uses an existing variable sales. */
+
+			var sales = "Toyota";
+
+			function carTypes(name) {
+				if (name === "Honda") {
+					return name;
+				} else {
+					return "Sorry, we don't sell " + name + ".";
+				}
+			}
+
+			var car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
+
+			console.log(car.myCar); // Saturn
+			console.log(car.getCar); // Honda
+			console.log(car.special); // Toyota
+
+			// You can use a numeric or string literal for the name of a property or nest an object inside another:
+
+			var car = { manyCars: {a: "Saab", "b": "Jeep"}, 7: "Mazda" };
+
+			console.log(car.manyCars.b); // Jeep
+			console.log(car[7]); // Mazda
+
+
+			/*
+
+			Object property names can be any string, including an empty string.
+
+			If the property name wouldn't be a valid JS identifier or number, it has to be in quotes.
+
+			Property values that aren't valid identifiers have to be accessed with bracket notation:
+			*/
+
+			var unusualPropertyNames = {
+				"": "An empty string",
+				"!": "Bang!"
+			}
+			console.log(unusualPropertyNames.""); // SyntaxError: Unexpected string
+			console.log(unusualPropertyNames[""]); // An empty string
+			console.log(unusualPropertyNames.!); // SyntaxError: Unexpected token !
+			console.log(unusualPropertyNames["!"]); // Bang!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
