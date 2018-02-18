@@ -196,8 +196,27 @@ JavaScript Grammar and Types:
 
 			// Don't use a trailing comma (at the end)!
 
-			
+		// Boolean Literals:
 
+			// They have two literal values: true and false. But they're different from Boolean objects, which are wrappers around the primitive Boolean data type.
+
+		// Integers:
+
+			// Can be expressed in decimal (base 10), hexadecimal (base 16), octal (base 8) and binary (base 2).
+
+			// Examples of integer literals:
+
+				// A decimal integer consists of a sequence of digits without a leading zero:
+				var decimalBase10 = [0, 117, -345];
+
+				// A leading zero on an integer literal, or a leading 0o or 0O, indicates it is in octal. Octal integers can only include the digits 0-7:
+				var octalBase8 = [015, 0001, -0o77];
+
+				// A leading 0x or 0X indicates a hexidecimal integer literal. Hexadecimal integers can include digits 0-9 and the letters a-f and A-F (the case doesn't change the value):
+				var hexadecimalBase16 = [0x1123, 0x00111, -0xF1A7];
+
+				// A leading 0b or 0B indicates a binary integer literal. Binary integers can only include the digits 0 and 1:
+				var binaryBase2 = [0b11, 0b0011, -0b11];
 
 
 
