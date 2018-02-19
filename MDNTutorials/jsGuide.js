@@ -277,15 +277,74 @@ JavaScript Grammar and Types:
 			console.log(unusualPropertyNames.!); // SyntaxError: Unexpected token !
 			console.log(unusualPropertyNames["!"]); // Bang!
 
+			// Enhanced Object Literals:
 
+				// Supported in ES2015: setting the prototype at construction; shorthand for "foo: foo" assignments; defining methods; making super calls; computing property names with expressions.
 
+				var obj = {
+					// __proto__
+					__proto__: theProtoObj,
+					// Shorthand for 'handler: handler'
+					handler,
+					// Methods
+					toString() {
+						// Super calls
+						return 'd ' + super.toString();
+					},
+					// Computed (dynamic) property names
+					[ 'prop_' + (() => 42)() ]: 42
+				};
 
+				// Note:
 
+				var foo = {a: 'alpha', 2: 'two'};
 
+				console.log(foo.a); // alpha
+				console.log(foo['a']); // alpha
+				// console.log(foo[a]); // Error: a is not defined
 
+				console.log(foo[2]); // two
+				console.log(foo['2']); // two
+				// console.log(foo.2); // Error: missing ) after argument list
+				
+				
+		// ReExp Literals (a pattern enclosed btwn slashes):
 
+		var re = /ab+c/;		
 
+		// String Literals:
 
+			// zero or more chars in quotes
+			'foo';
+			"bar";
+			'1234';
+			'one line \n another line';
+			"John's cat";
+
+			// You can use the String.length property w/a string literal:
+			console.log("John's cat".length); // 10
+
+			// ES2015: Template Literals:
+
+				// Basic literal string creation:
+				`In JavaScript, '\n' is a line-feed.`
+
+				// Multiline strings:
+				`In JavaScript, template strings can run
+				over multiple lines, but double- and single-
+				quoted strings cannot.`
+
+				// String interpolation:
+				var name = "Bob", time = "today";
+				`Hello ${name}, how are you ${time}?`
+
+				// Construct an HTTP request prefix is used to interpret the replacements and construction:
+
+				POST`http://foo.org/bar?a=${a}&b=${b}
+					Content-Type: application/json
+					X-Credentials: ${credentials}
+					{ "foo": ${foo},
+					  "bar": ${bar}}`(myOnReadyStateChangeHandler);
 
 
 
