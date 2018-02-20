@@ -70,7 +70,16 @@ Any JS expression is also a statement.
 
 	/*
 
-	Falsy Values:
+	Falsy Values (evaluate to false):
+
+		false
+		undefined
+		null
+		0
+		NaN
+		""
+
+	All other values, including all objects, evaluate to true when passed to a conditional statement.
 
 	*/
 
