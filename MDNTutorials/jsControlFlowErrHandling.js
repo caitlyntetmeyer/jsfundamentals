@@ -68,21 +68,35 @@ Any JS expression is also a statement.
 			statement_4_runs_if_condition_is_false;
 		}
 
-	/*
+		/*
 
-	Falsy Values (evaluate to false):
+		Falsy Values (evaluate to false):
 
-		false
-		undefined
-		null
-		0
-		NaN
-		""
+			false
+			undefined
+			null
+			0
+			NaN
+			""
 
-	All other values, including all objects, evaluate to true when passed to a conditional statement.
+		All other values, including all objects, evaluate to true when passed to a conditional statement: */
 
-	*/
+			var b = new Boolean(false); // This is a Boolean object
+			if (b) // true because b does exist
+			if (b == true) // false because b's value is false
 
+		// Example - This function returns "true" if the num of chars in a Text object is 3; otherwise, it displays an alert and returns "false":
+
+			function checkData() {
+				if (document.form1.threeChar.value.length == 3) {
+					return true;
+				} else {
+					alert("Enter exactly 3 characters. " +
+						document.form1.threeChar.value + " is not valid.");
+					return false;
+				}
+			}
+	
 
 
 
