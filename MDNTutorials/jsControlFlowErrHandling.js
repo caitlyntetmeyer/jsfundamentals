@@ -134,6 +134,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_e
 			console.log('Sorry, we are out of ' + fruittype + '.');
 	}
 
+// Exception Handling Statements
+
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 
 
 
