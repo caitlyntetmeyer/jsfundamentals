@@ -4,9 +4,9 @@ JavaScript Control Flow and Error Handling
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 
-The semicolon is used to separate statements in JS code.
+	The semicolon is used to separate statements in JS code.
 
-Any JS expression is also a statement.
+	Any JS expression is also a statement.
 
 */
 
@@ -32,7 +32,7 @@ Any JS expression is also a statement.
 		{
 			var x = 2;
 		}
-		console.log(x); // 2 - because both "var x" statements are in the same SCOPE.
+		console.log(x); // 2 because both "var x" statements are in the same SCOPE.
 
 			// Starting with ECMAScript2015, the "let" variable declaration IS block-scoped.
 
@@ -81,9 +81,9 @@ Any JS expression is also a statement.
 
 		All other values, including all objects, evaluate to true when passed to a conditional statement: */
 
-			var b = new Boolean(false); // This is a Boolean object
+			var b = new Boolean(false); // This is a Boolean _object_
 			if (b) // true because b does exist
-			if (b == true) // false because b's value is false
+			if (b == true) // false because b's _value_ is false
 
 		// Example - This function returns "true" if the num of chars in a Text object is 3; otherwise, it displays an alert and returns "false":
 
@@ -98,7 +98,41 @@ Any JS expression is also a statement.
 			}
 	
 
+// Switch Statements
 
+	// A switch statement lets a program evaluate an expression and try to match the expression's value to a case label:
+
+	switch (expression) {
+		case label_1:
+			statements_1
+			[break;] // Include this if you want the program to break out of "switch" once the matched statement is executed.
+		case label_2:
+			statements_2
+			[break;]
+			...
+		default:
+			statements_def 
+			[break;]
+	}
+
+	// Example:
+
+	switch (fruittype) {
+		case 'Oranges':
+			console.log('Oranges are $0.59 a pound.');
+			break;
+		case 'Apples':
+			console.log('Apples are $0.32 a pound.');
+			break;
+		case 'Bananas':
+			console.log('Bananas are $0.48 a pound.');
+			break;
+		case 'Cherries':
+			console.log('Cherries are $3.00 a pound.');
+			break;
+		default:
+			console.log('Sorry, we are out of ' + fruittype + '.');
+	}
 
 
 
