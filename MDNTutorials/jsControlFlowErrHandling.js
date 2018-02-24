@@ -81,7 +81,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_e
 
 		All other values, including all objects, evaluate to true when passed to a conditional statement: */
 
-			var b = new Boolean(false); // This is a Boolean _object_
+			var b = new Boolean(false); // This is a Boolean _object_ (different from a Boolean _value_)
 			if (b) // true because b does exist
 			if (b == true) // false because b's _value_ is false
 
@@ -136,7 +136,16 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_e
 
 // Exception Handling Statements
 
-	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
+	// You can throw exceptions using the "throw" statement and handle them using the "try...catch" statements. Nearly any object can be thrown in JS.
+
+	// Throw Statement:
+
+		// Use it to throw an exception:
+
+		throw 'Error2'; // String type
+		throw 42; // Number type
+		throw true; // Boolean type
+
 
 
 
