@@ -146,7 +146,25 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_e
 		throw 42; // Number type
 		throw true; // Boolean type
 
+		// Example:
 
+		// Create an object type UserException
+		function UserException(message) {
+			this.message = message;
+			this.name = 'UserException';
+		}
+
+		// Make the exception convert to a pretty string when used as a string
+		UserException.prototype.toString = function() {
+			return this.name + ': "' + this.message + '"';
+		}
+
+		// Create an instance of the object type and throw it
+		throw new UserException('Value too high');
+
+	// try...catch Statement:
+
+		// Marks a block of statements to try, and specifies one or more responses should an exception be thrown. If an exception is thrown, the "try...catch" statement catches it.
 
 
 
