@@ -254,8 +254,66 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_e
 						// "return false" is executed now
 						console.log(5); // not reachable
 					}
-					
+
 					f(); // console 0, 1, 3; returns false
+
+				// New Example - Overwriting of return values by the finally block also applies to exceptions thrown or re-thrown inside of the catch block:
+
+					function f() {
+						try {
+							throw 'bogus';
+						} catch(e) {
+							console.log('caught inner "bogus"');
+							throw e; // This throw statement is suspended til finally block has completed.
+						} finally {
+							return false; // overwrites the previous "throw"
+						}
+						// "return false" is executed now
+					}
+
+					try {
+						f();
+					} catch(e) {
+						// This is never reached because the throw inside the catch is overwritten by the return in finally above:
+						console.log('caught outer "bogus"');
+					}
+
+					// OUTPUT: 
+					// console: caught inner "bogus"
+					// returns false
+
+				// You can nest one or more "try...catch" statements.
+
+	// Utilizing Error Objects
+
+		// Depending on the type of error, you may be able to use the "name" and "message" properties.
+
+		// "name" provides the general class of Error.
+
+		// "message" provides a more succinct msg than you'd get by converting the error object to a string.
+
+		// Example:
+
+			function doSomethingErrorProne() {
+				if (ourCodeMakesAMistake()) {
+					throw (new Error('The message'));
+				}
+			}
+			...
+			try {
+				doSomethingErrorProne();
+			} catch (e) {
+				console.log(e.name); // logs "Error"
+				console.log(e.message); // logs "The message" - or a JS error msg
+			}
+
+
+
+
+
+
+
+
 
 
 
