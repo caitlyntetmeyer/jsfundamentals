@@ -200,7 +200,62 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_e
 			logMyErrors(e); // pass exception object to error handler -> your own function
 		}
 
+			// The Catch Block:
 
+				// You can use a catch block to handle all exceptions that may be generated in the try block:
+
+				catch (catchID) {
+					statements
+				}
+
+				// Example:
+
+				try {
+					throw 'myException': // generates an exception
+				}
+				catch (e) {
+					// statements to handle any exceptions:
+					logMyErrors(e); // pass exception object to error handler
+				}
+
+			// The Finally Block:
+
+				// contains statements to execute after the try and catch blocks execute - but BEFORE the statements FOLLOWING the "try...catch" statement.
+
+				// executes whether or not an exception's thrown (even if no catch block handles a thrown exception)
+
+				// This example opens a file and then executes statements that use the file. If an exception's thrown while the file's open, the finally block closes the file before the script fails:
+
+					openMyFile();
+
+					try {
+						writeMyFile(theData); // This may throw an error.
+					} catch(e) {
+						handleError(e); // If we get an error, we handle it.
+					} finally {
+						closeMyFile(); // Always close the resource.
+					}
+
+				// If the finally block returns a value, the value becomes the return value of the entire try-catch-finally production, regardless of any return statements in the try and catch blocks:
+
+					function f() {
+						try {
+							console.log(0);
+							throw 'bogus';
+						} catch(e) {
+							console.log(1);
+							return true; // This return statement is suspended until the finally block has completed.
+							console.log(2); // not reachable
+						} finally {
+							console.log(3);
+							return false; // overwrites the previous return
+							console.log(4); // not reachable
+						}
+						// "return false" is executed now
+						console.log(5); // not reachable
+					}
+					
+					f(); // console 0, 1, 3; returns false
 
 
 
