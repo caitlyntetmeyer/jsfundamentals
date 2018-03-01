@@ -378,7 +378,23 @@ Numbers:
 	isFinite(NaN); // false
 	isFinite(203843); // true
 
+/*
 
+Strings
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+
+*/
+
+	// Strings in JS are sequences of Unicode characters. They're sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by 1 or 2 code units.
+
+	// To find the length of a string, access its length property:
+	'hello'.length; // 5
+
+	// You can use strings like objects. They have methods that let you manipulate the string and access info abt the string:
+	'hello'.charAt(0); // "h" because "h" is at the 0th place
+	'hello, world'.replace('hello', 'goodbye'); // "goodbye, world"
+	'hello'.toUpperCase(); // "HELLO"
 
 
 
