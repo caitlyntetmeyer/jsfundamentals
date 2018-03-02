@@ -396,8 +396,27 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_Jav
 	'hello, world'.replace('hello', 'goodbye'); // "goodbye, world"
 	'hello'.toUpperCase(); // "HELLO"
 
+/*
 
+null - a deliberate non-value only accessible through the keyword "null"
 
+undefined - a value that hasn't been initialized yet
+
+falsy - false, 0, "", NaN, null, undefined
+
+Check if something's falsy: */
+Boolean(''); // false because an empty string is falsy
+Boolean(234); // true because all non-false and non-falsy values become true
+
+/*
+
+Variables
+
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+
+	
+
+*/
 
 
 
