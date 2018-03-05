@@ -147,7 +147,7 @@ Operators:
 
 	'3' + 4 + 5;  // "345"
 	 3 + 4 + '5'; // "75"
-	// Adding an empty string to something is a useful way of converting it to a string itself.
+	// Adding an empty string to (the beginning of) something is a useful way of converting it to a string itself.
 
 	// Comparisons in JavaScript can be made using <, >, <= and >=. These work for both strings and numbers. Equality is a little less straightforward. The double-equals operator performs type coercion if you give it different types, with sometimes interesting results:
 
@@ -158,6 +158,64 @@ Operators:
 	123 === '123'; // false
 	1 === true;    // false
 	// There are also != and !== operators.
+
+/*
+
+Control Structures:
+
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+
+	Conditional statements are supported by "if" and "else". */
+	var name = "kittens";
+	if (name == "puppies") {
+		name += " woof";
+	} else if (name == "kittens") {
+		name += " meow";
+	} else {
+		name += "!";
+	}
+	name == 'kittens meow'; // true
+
+	// "while" loops and "do-while" loops ("do-while" loops execute the body of the loop at least once):
+
+	while (true) {
+		// an infinite loop
+	}
+
+	var input;
+	do {
+		input = get_input();
+	} while (inputIsNotValid(input));
+
+	// for loop
+	for (var i = 0; i < 5; i++) {
+		// Will execute 5 times
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
